@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>すぎやまノート</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Kiwi+Maru&display=swap" rel="stylesheet">
+  <script type="text/javascript" src="jquery-3.6.3.min.js"></script>
+  <script type="text/javascript" src="JavaScript.js"></script>
+  <script>
+        $(function () {
+    $(window).scroll(function () {
+        const windowHeight = $(window).height();
+        const scroll = $(window).scrollTop();
+
+        $('.para').each(function () {
+        const targetPosition = $(this).offset().top;
+        if (scroll > targetPosition - windowHeight + 100) {
+            $(this).addClass("is-fadein");
+        }
+        });
+    });
+    });
+  </script>
+  <script>
+    $(function () {
+      function end_loader() {
+        $('.loader').fadeOut(800);
+      }
+      $(window).on('load', function () {
+        setTimeout(function () {
+          end_loader();
+        }, 3000)
+      })
+    })
+    </script>
+
+
+
+</head>
+<body>
+    <!-- なびげ～しょん -->
+          <!-- <nav>
+             <div class="padding">
+              <h1>すぎやまノート</h1>
+              <ul>
+                  <li><a href="#area-1">うぇぶ</a></li>
+                  <li><a href="#area-2">ぽすた</a></li>
+                  <li><a href="#area-3">いらすと</a></li>
+                  <li><a href="#area-4">れんらく</a></li>
+              </ul>
+            </div>
+          </nav> -->
+
+          <input class="menu-icon" type="checkbox" id="menu-icon" name="menu-icon"/>
+    <label for="menu-icon"></label>
+    <nav class="nav">     
+      <ul class="pt-5">
+        <li><a href="web.html">うぇぶ を みる！</a></li>
+        <li><a href="DTP.html">いんさつぶつ を みる！</a></li>
+        <li><a href="illust.html">いらすと を みる！</a></li>
+        <li><a href="contact.html">れんらく を する！</a></li>
+      </ul>
+    </nav>
+    
+    <div class="loader">
+        <p class="txt">読み込み中ですな</p>
+      </div>
+
+      
+
+      <!-- へっだ～ -->
+
+        <header>
+            <div class="h_massage">
+            <h1>すぎやまノート</h1>
+            <p>はじめまして。<br>閲覧ありがとうございます。<br><br>わたしは学生です。<br>クリエイティブなことに興味があり<br>ちまちま手を出しています。
+            <br><br>あなたとのご縁を大切にしたいです。<br>このもちもちしている円と共に<br>どうぞごゆっくりご覧ください。</p>
+            </div>
+            <img src="media/blobanimation.svg" alt="header circle">
+        </header>
+    <main>
+
+
+        <!-- すぎやまってどんな人？ -->
+        <h1 class="main_h1">すぎやまってどんな人？</h1>
+        <div class="para">
+            <div class="profile">
+                <div class="chimi">
+                    <p>\ もちもちかわいい /<br></p>
+                    <img class="profile_chimi" src="media/my chimi.png" alt="すぎやまのちみキャラ">
+                    <p>2.5等身のすぎやま</p>
+                </div>
+                <div class="mochi">
+                    <img class="back_mochi_1" src="media/blobanimation moji.svg" alt="文字もちもち">
+                    <p>なまえ：<ruby>杉山 思<rt>すぎやま こと</rt></ruby>
+                    <br><br>2003年3月25日生まれ / ひつじ年 / 牡羊座
+                    <br><br>沼津情報・ビジネス専門学校所属 / 2024年卒業見込み
+                    <br>webデザイン、コーディング、DTPを学んでいます
+                    <br><br>基本的にヲタク！沢山お絵描きして食べて寝ない！
+                    <br>推しに盲目です。全員抱きしめる。
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- すぎやまはこんなことができる！ -->
+        <h1 class="main_h1">すぎやまはこんなことができる！</h1>
+
+        <div class="para">
+            <div class="can">
+                <section class="can_img">
+                    <img class="can_PC" src="media/PC.png" alt="パソコンのいらすと">
+                <img class="back_mochi" src="media/blobanimation moji.svg" alt="画像もちもち">
+                </section>
+                <section class="can_moji">
+                    <h2>WEBデザインとコーディング</h2>
+                    <p>HTML、CSSの基本は学習済みです。
+                    <br>Scss、JavaScript、WordPressは学習中です。
+                    <br>webデザインは日々勉強中です。
+                    <br>もっといろんなデザインをしてみたい…！
+                    </p>
+                    <button onclick="location.href='http://m21020.cg-numasen.com/Portfolio/web.html'">
+                        <span>作品をみる!</span>
+                        <svg width="34" height="34" viewBox="0 0 74 74" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="37" cy="37" r="35.5" stroke="black" stroke-width="3"></circle>
+                            <path d="M25 35.5C24.1716 35.5 23.5 36.1716 23.5 37C23.5 37.8284 24.1716 38.5 25 38.5V35.5ZM49.0607 38.0607C49.6464 37.4749 49.6464 36.5251 49.0607 35.9393L39.5147 26.3934C38.9289 25.8076 37.9792 25.8076 37.3934 26.3934C36.8076 26.9792 36.8076 27.9289 37.3934 28.5147L45.8787 37L37.3934 45.4853C36.8076 46.0711 36.8076 47.0208 37.3934 47.6066C37.9792 48.1924 38.9289 48.1924 39.5147 47.6066L49.0607 38.0607ZM25 38.5L48 38.5V35.5L25 35.5V38.5Z" fill="black"></path>
+                        </svg>
+                    </button>
+                </section>
+            </div>
+        </div>
+
+        <div class="para">
+            <div class="can_hanten">
+                <section class="can_img">
+                    <img class="can_DTP" src="media/DTP.png" alt="チラシのいらすと">
+                    <img class="back_mochi" src="media/blobanimation moji.svg" alt="画像もちもち">
+                </section>
+                <section class="can_moji">
+                    <h2>DTPとエディトリアルデザイン</h2>
+                    <p>チラシ・広告・ポスター・書物など…。
+                        <br>様々なものを作ってみています。
+                        <br>ポートフォリオはいろんな種類を作りました。
+                        <br>アイデアの引き出しをもっと増やしていきたいです！
+                    </p>
+                    <button onclick="location.href='http://m21020.cg-numasen.com/Portfolio/DTP.html'">
+                        <span>作品をみる!</span>
+                        <svg width="34" height="34" viewBox="0 0 74 74" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="37" cy="37" r="35.5" stroke="black" stroke-width="3"></circle>
+                            <path d="M25 35.5C24.1716 35.5 23.5 36.1716 23.5 37C23.5 37.8284 24.1716 38.5 25 38.5V35.5ZM49.0607 38.0607C49.6464 37.4749 49.6464 36.5251 49.0607 35.9393L39.5147 26.3934C38.9289 25.8076 37.9792 25.8076 37.3934 26.3934C36.8076 26.9792 36.8076 27.9289 37.3934 28.5147L45.8787 37L37.3934 45.4853C36.8076 46.0711 36.8076 47.0208 37.3934 47.6066C37.9792 48.1924 38.9289 48.1924 39.5147 47.6066L49.0607 38.0607ZM25 38.5L48 38.5V35.5L25 35.5V38.5Z" fill="black"></path>
+                        </svg>
+                    </button>
+                </section>
+            </div>  
+        </div>
+
+        <div class="para">
+            <div class="can">
+                <section class="can_img">
+                    <img class="can_PC" src="media/Paint.png" alt="パレットのいらすと">
+                <img class="back_mochi" src="media/blobanimation moji.svg" alt="画像もちもち">
+                </section>
+                <section class="can_moji">
+                    <h2>イラストやその他作品</h2>
+                    <p>趣味でイラストを描いています。
+                    <br>最近はlive2Dに挑戦しています。
+                    <br>その他、わたしのことをもっと知りたい方は
+                    <br>是非覗いてみてください！
+                    </p>
+                    <button onclick="location.href='http://m21020.cg-numasen.com/Portfolio/illust.html'">
+                        <span>作品をみる!</span>
+                        <svg width="34" height="34" viewBox="0 0 74 74" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="37" cy="37" r="35.5" stroke="black" stroke-width="3"></circle>
+                            <path d="M25 35.5C24.1716 35.5 23.5 36.1716 23.5 37C23.5 37.8284 24.1716 38.5 25 38.5V35.5ZM49.0607 38.0607C49.6464 37.4749 49.6464 36.5251 49.0607 35.9393L39.5147 26.3934C38.9289 25.8076 37.9792 25.8076 37.3934 26.3934C36.8076 26.9792 36.8076 27.9289 37.3934 28.5147L45.8787 37L37.3934 45.4853C36.8076 46.0711 36.8076 47.0208 37.3934 47.6066C37.9792 48.1924 38.9289 48.1924 39.5147 47.6066L49.0607 38.0607ZM25 38.5L48 38.5V35.5L25 35.5V38.5Z" fill="black"></path>
+                        </svg>
+                    </button>
+                </section>
+            </div>
+        </div>
+
+        <!-- れんらく -->
+
+        <h1 class="mail_h1">ちょっと気になってきた？<br>ここから連絡ができますよ！</h1>
+            <div class="mail_chimi_matome">
+                    <p>\ わくわくどきどき /</p>
+                    <img class="mail_chimi" src="media/my chimi.png" alt="すぎやまのちみキャラ">
+            </div>
+        <button onclick="location.href='http://m21020.cg-numasen.com/Portfolio/contact.html'" class="main_mail"> すぎやまにメールを送る！
+        </button>        
+    </main>
+
+    <!-- ふった～ -->
+
+    <footer>
+        <h1>すぎやまノート</h1>
+        <ul>
+            <li><a href="index.html">トップ</a></li>
+            <li><a href="web.html">web</a></li>
+            <li><a href="DTP.html">DTP</a></li>
+            <li><a href="illust.html">イラスト</a></li>
+            <li><a href="contact.html">お問い合わせ</a></li>
+        </ul>
+    </footer>
+    
+</body>
+</html>
