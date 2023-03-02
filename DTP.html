@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>すぎやまこうこくノート</title>
+  <link rel="stylesheet" href="DTP.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Kiwi+Maru&display=swap" rel="stylesheet">
+  <script type="text/javascript" src="web.js"></script>
+  <script type="text/javascript" src="jquery-3.6.3.min.js"></script>
+  <script>
+        $(function () {
+    $(window).scroll(function () {
+        const windowHeight = $(window).height();
+        const scroll = $(window).scrollTop();
+
+        $('.para').each(function () {
+        const targetPosition = $(this).offset().top;
+        if (scroll > targetPosition - windowHeight + 100) {
+            $(this).addClass("is-fadein");
+        }
+        });
+    });
+    });
+  </script>
+  <script>
+    $(function () {
+      function end_loader() {
+        $('.loader').fadeOut(800);
+      }
+      $(window).on('load', function () {
+        setTimeout(function () {
+          end_loader();
+        }, 3000)
+      })
+    })
+    </script>
+</head>
+
+<body>
+
+    <!-- めにゅ～と読み込み -->
+    <input class="menu-icon" type="checkbox" id="menu-icon" name="menu-icon"/>
+    <label for="menu-icon"></label>
+    <nav class="nav">     
+      <ul class="pt-5">
+        <li><a href="index.html">とっぷぺーじ に いく！</a></li>
+        <li><a href="web.html">うぇぶ を みる！</a></li>
+        <li><a href="illust.html">いらすと を みる！</a></li>
+        <li><a href="contact.html">れんらく を する！</a></li>
+      </ul>
+    </nav>
+    
+    <div class="loader">
+        <p class="txt">DTPのページを読み込み中ですな</p>
+      </div>
+
+      <header>
+        <h1>広告・エディトリアルデザイン<br>作品</h1>
+        <div class="header_matome">
+            <div class="header_img">
+                <img class="header_PC" src="media/DTP.png" alt="パソコンのいらすと">
+                <img class="header_mochi" src="media/blobanimation moji.svg" alt="画像もちもち">
+            </div>
+            <p>このページには、ポスターと
+                <br>エディトリアルデザインの作品を掲載しています。
+                <br>どうぞ、ゆっくりご覧ください。
+            </p>
+        </div>
+      </header>
+
+      <main>
+
+        <section>
+            <figure>
+                <figcaption class="up">第11回静岡県ものづくり競技大会<br>ポスター</figcaption>
+                <img src="media/mono.png" alt="ものづくり競技大会ポスター">
+                <figcaption class="down">静岡県ものづくり競技大会のポスターデザイン募集に応募した作品です。
+                    <br>職人のように専門分野に特化したイメージなので、クールな印象にしました。
+                    <br>モノクロと黄色でクールの中に学生らしい活発な要素も入れました。
+                </figcaption>
+            </figure>
+            <figure>
+                <figcaption class="up">第10回静岡県ものづくり競技大会<br>課題作品</figcaption>
+                <img src="media/mono.jpg" alt="ものづくり競技会で制作した作品">
+                <figcaption class="down">静岡県ものづくり競技大会で制作した作品です。
+                    <br>１年生に作成したものなのでまだまだつめが甘いですね…。
+                    <br>すごく良い経験になりました！
+                </figcaption>
+            </figure>
+        </section>
+
+        <hr>
+        <section>
+            <figure>
+                <figcaption class="up">静岡洋菓子70年のあゆみ<br>表紙</figcaption>
+                <img src="media/yougashi hyoshi.png" alt="静岡洋菓子７０年のあゆみ">
+                <figcaption class="down">静岡県洋菓子協会の方から募集があった際に応募した作品です。
+                    <br>洋菓子と言えば柔らかい雰囲気やかわいいイメージがあったので、提供写真からデザインイメージに合う写真を選び編集して使用しました。
+                    <br>パンを運ぶパン職人がかわいい…！
+                </figcaption>
+            </figure>
+            <figure>
+                <figcaption class="up">静岡県洋菓子作品展<br>ポスター</figcaption>
+                <img src="media/yougashi poster.png" alt="静岡県洋菓子作品展ポスター">
+                <figcaption class="down">静岡県洋菓子協会の方から募集があった際に応募した作品です。
+                    <br>こちらは作品展の告知ポスターです。
+                    <br>提供写真からどのようなデザインにしようか試行錯誤しながら制作しました。
+                    <br>制作を通して、illustratorとPhotoshopのスキルがアップしたと思います。
+                </figcaption>
+            </figure>
+        </section>
+        
+        <hr>
+        
+        <section>
+            <figure>
+                <figcaption class="up">ポートフォリオ<br>シンプル</figcaption>
+                <img src="media/portfolio mockup1 data.png" alt="ぽーとふぉりおのしんぷる">
+                <figcaption class="down">最初に制作したシンプルなデザインのポートフォリオです。
+                    <br>ポートフォリオの中の作品を見てほしいのであまり装飾がないものをしました。
+                    <br>線を主に用いたデザインでまとめました。
+                </figcaption>
+            </figure>
+            <figure>
+                <figcaption class="up">ポートフォリオ<br>パンク</figcaption>
+                <img src="media/portfolio mockup2 data.png" alt="ぽーとふぉりおのぱんく">
+                <figcaption class="down">
+                    <br>ポートフォリオでデザイン性のあるものも作ってみようと思い制作したものです。
+                    <br>パンクでかっこいいイメージにしました。
+                    <br>表紙は自分で描きました。クールな女の子すてき！
+                </figcaption>
+            </figure>
+        </section>
+        <!-- 著作者：pikisuperstar／出典：Freepik -->
+
+
+
+
+        <p class="big">もっともっと制作していきます！<br>更新をお待ちください！</p>
+
+      </main>
+
+      <footer>
+        <h1>すぎやまノート</h1>
+        <ul>
+            <li><a href="index.html">トップ</a></li>
+            <li><a href="web.html">web</a></li>
+            <li><a href="DTP.html">DTP</a></li>
+            <li><a href="illust.html">イラスト</a></li>
+            <li><a href="contact.html">お問い合わせ</a></li>
+        </ul>
+    </footer>
+    
+</body>
+</html>
